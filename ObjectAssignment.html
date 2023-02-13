@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Number1
+
+        function Car (Name, YearModel, EngineType, Manufacturer, Brand, CountryOrigin){
+
+            this.N = Name;
+            this.Y = YearModel;
+            this.E = EngineType;
+            this.M = Manufacturer;
+            this.B = Brand;
+            this.C = CountryOrigin;
+        }
+
+        const firstcar = new Car ("BMW 7 Series", "2022", "Automatic", "BMW Group", "BMW", "Germany")
+        console.log(firstcar);
+
+        //Number2
+
+        function basicoperation(firstnumber, secondnumber){
+
+            this.firstnumber = firstnumber
+            this.secondnumber = secondnumber
+
+            this.Add = function(){
+                return this.firstnumber + this.secondnumber;
+            }
+            this.Subtraction = function(){
+                return this.firstnumber - this.secondnumber;           
+            }
+            this.Multiplication = function(){
+                return this.firstnumber * this.secondnumber;           
+            }
+            this.Division = function(){
+                return this.firstnumber / this.secondnumber;           
+            }
+        }
+        const firstequation = new basicoperation (5, 22);
+        console.log('additional: ' + firstequation.Add() );
+        console.log('subtraction: ' + firstequation.Subtraction() );
+        console.log('multiplication: ' + firstequation.Multiplication() );
+        console.log('division: ' + firstequation.Division() );
+
+        //Number3
+
+        function ObjMary(first, last, address, age, email) {
+
+        this.firstName = first;
+        this.lastName = last;
+        this.add = address;
+        this.age = age;
+        this.email = email;
+}
+
+        const Mary = new ObjMary("Mary", "Smith", "BURKHARDT RD. EVANSVILLE", 29, "mary123@yahoo.com");
+
+        Mary.prototype.nationality = "American";
+        Mary.prototype.language = "English"
+
+        console.log(Mary.nationality); 
+        console.log(Mary.language); 
+
+    </script>
+</body>
+</html>
